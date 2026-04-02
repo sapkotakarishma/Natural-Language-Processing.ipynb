@@ -44,10 +44,13 @@ from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Initialize tools
-nltk.download('stopwords')
-nltk.download('wordnet')
-stop_words = set(stopwords.words('english'))
-lemmatizer = WordNetLemmatizer()
+     nltk.download('stopwords')
+     
+     nltk.download('wordnet')
+     
+     stop_words = set(stopwords.words('english'))
+     
+     lemmatizer = WordNetLemmatizer()
 
 def nlp_pipeline(text):
     # 1. Cleaning: Keep only letters

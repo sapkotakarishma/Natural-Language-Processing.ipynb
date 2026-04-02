@@ -36,12 +36,16 @@
        Why: Algorithms cannot "read" strings; they need a numerical matrix to perform calculations.
 
 
-##### Example Code########
-import re
-import nltk
-from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
-from sklearn.feature_extraction.text import TfidfVectorizer
+     ##### Example Code########
+          import re
+          
+          import nltk
+          
+          from nltk.corpus import stopwords
+          
+          from nltk.stem import WordNetLemmatizer
+          
+          from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Initialize tools
      nltk.download('stopwords')

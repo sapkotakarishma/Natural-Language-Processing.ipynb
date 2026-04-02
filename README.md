@@ -66,18 +66,18 @@ def nlp_pipeline(text):
 
 # --- Example Usage ---
 
-raw_data = ["I am loving this NLP project!", "The algorithms are running smoothly."]
-
-cleaned_data = [nlp_pipeline(doc) for doc in raw_data]
+          raw_data = ["I am loving this NLP project!", "The algorithms are running smoothly."]
+          
+          cleaned_data = [nlp_pipeline(doc) for doc in raw_data]
 
 # 5. Vectorization: Turning text into a math matrix
-
-vectorizer = TfidfVectorizer()
-
-matrix = vectorizer.fit_transform(cleaned_data)
-
-print(f"Original: {raw_data[0]}")
-
-print(f"Processed: {cleaned_data[0]}")
-
-print(f"Matrix Shape: {matrix.shape}")
+          
+          vectorizer = TfidfVectorizer()
+          
+          matrix = vectorizer.fit_transform(cleaned_data)
+          
+          print(f"Original: {raw_data[0]}")
+          
+          print(f"Processed: {cleaned_data[0]}")
+          
+          print(f"Matrix Shape: {matrix.shape}")

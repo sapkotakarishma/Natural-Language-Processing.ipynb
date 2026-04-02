@@ -51,12 +51,15 @@ lemmatizer = WordNetLemmatizer()
 
 def nlp_pipeline(text):
     # 1. Cleaning: Keep only letters
+    
     text = re.sub(r'[^a-zA-Z\s]', '', text).lower()
     
     # 2. Tokenization & 3. Stopword Removal
+    
     tokens = [word for word in text.split() if word not in stop_words]
     
     # 4. Lemmatization: Bringing words to their root
+    
     normalized = [lemmatizer.lemmatize(w) for w in tokens]
     
     return " ".join(normalized)
@@ -70,8 +73,11 @@ cleaned_data = [nlp_pipeline(doc) for doc in raw_data]
 # 5. Vectorization: Turning text into a math matrix
 
 vectorizer = TfidfVectorizer()
+
 matrix = vectorizer.fit_transform(cleaned_data)
 
 print(f"Original: {raw_data[0]}")
+
 print(f"Processed: {cleaned_data[0]}")
+
 print(f"Matrix Shape: {matrix.shape}")
